@@ -10,10 +10,7 @@ galaxy_info:
   platforms: 
   - name: Debian
     versions:
-    - 9.0
-    - 9.1
-    - 9.1
-    - 9.2
+    - stretch
   - name: Ubuntu
     versions:  
     - bionic 
