@@ -1,9 +1,14 @@
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CppComet/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+
 # Ansible role for CppComet 
  
+Comet server is written in C++, for storing data using MySQL.   
 [CppComet repository](https://github.com/CppComet/comet-server) and [documentation](http://comet-server.com/)
 
 # Variables and their default values:
 
+[vars documentation in comet.ini file](https://comet-server.com/wiki/doku.php/en:comet:ini-file)
 ```
 cppcomet_node_name: n1
 cppcomet_useQueryLoger: false
@@ -31,3 +36,26 @@ cppcomet_password: root
 cppcomet_fragment_buf_size: 600
 cppcomet_git_branch: master 
 ```
+
+# Example Playbook
+
+
+Install role `ansible-galaxy install CppComet.CppComet-ansible-role`
+
+Playbook example:
+
+```
+- hosts: all 
+  roles: 
+    - { role: geerlingguy.mysql } # Удобная роль https://github.com/geerlingguy/ansible-role-mysql
+    - { role: CppComet }  
+```
+    
+# Support 
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CppComet/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+Free support in gitter chat and [RU forum](http://community.comet-server.com/t/ru-forum) and [EN forum](http://community.comet-server.com/t/ru-forum)
+
+# License
+
+MIT / BSD
